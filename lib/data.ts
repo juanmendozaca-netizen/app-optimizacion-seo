@@ -42,7 +42,7 @@ export const personalInfo = {
   email: 'juanmendozacalderon17@gmail.com',
   github: 'https://github.com/juanmendozaca-netizen',
   linkedin: 'https://www.linkedin.com/in/juancarlos-mendozacalderon11',
-  siteUrl: 'https://tuportafolio.com',
+  siteUrl: 'https://app-optimizacion-seo.vercel.app',
   // ¡De 1740px a solo 150px! Tu avatar cargará instantáneamente en el móvil
   avatar: 'https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?auto=format&fit=crop&w=150&h=150&q=80',
 };
