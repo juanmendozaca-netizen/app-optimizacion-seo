@@ -36,7 +36,7 @@ export const projects: Project[] = [
 ];
 
 export const personalInfo = {
-  name: 'Juan Carlos',
+  name: 'Juan Carlos Mendoza',
   title: 'Full Stack Developer',
   description: 'Desarrollador apasionado por crear experiencias web excepcionales',
   email: 'juanmendozacalderon17@gmail.com',
