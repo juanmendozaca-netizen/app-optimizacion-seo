@@ -6,6 +6,8 @@ export interface Project {
     technologies: string[];
     demoUrl?: string;
     githubUrl?: string;
+    githubFrontendUrl?: string;
+    githubBackendUrl?: string;
     featured: boolean;
 }
 

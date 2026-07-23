@@ -49,6 +49,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   if (!project) {
     notFound();
   }
+
   
   return (
     <div className="container mx-auto px-4 py-12">
@@ -59,63 +60,87 @@ export default async function ProjectDetailPage({ params }: Props) {
         ← Volver a Proyectos
       </Link>
 
-      <article>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          {project.title}
-        </h1>
+      <div className="max-w-4xl mx-auto">
+        <article>
+          <h1 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            {project.title}
+          </h1>
 
-        <div className="relative w-full h-96 mb-8 rounded-lg overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-          />
-        </div>
-
-        <p className="text-lg text-gray-700 mb-6">{project.description}</p>
-
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">
-            Tecnologías Utilizadas
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-              >
-                {tech}
-              </span>
-            ))}
+          <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden bg-gray-100">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            />
           </div>
-        </div>
 
-        <div className="flex gap-4">
-          {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-            >
-              Ver Demo
-            </a>
-          )}
-          {project.githubUrl && (
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition"
-            >
-              Ver Código
-            </a>
-          )}
-        </div>
-      </article>
+          <p className="text-lg text-gray-700 mb-6">{project.description}</p>
+
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">
+              Tecnologías Utilizadas
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex gap-4 flex-wrap">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              >
+                Ver Demo
+              </a>
+            )}
+
+            {project.githubFrontendUrl && (
+              <a
+                href={project.githubFrontendUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition"
+              >
+                Ver Código (Frontend)
+              </a>
+            )}
+            {project.githubBackendUrl && (
+              <a
+                href={project.githubBackendUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition"
+              >
+                Ver Código (Backend)
+              </a>
+            )}
+
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition"
+              >
+                Ver Código
+              </a>
+            )}
+          </div>
+        </article>
+      </div>
     </div>
-  );
+  )
 }

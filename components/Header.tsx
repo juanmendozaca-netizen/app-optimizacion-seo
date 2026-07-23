@@ -7,7 +7,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-gray-900 font-display">
-            {personalInfo.name}
+            {personalInfo.shortName}
           </Link>
           <ul className="flex gap-6">
             <li>

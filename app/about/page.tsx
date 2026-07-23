@@ -9,34 +9,38 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const skills = [
-    'JavaScript/TypeScript',
-    'React & Next.js',
-    'Node.js & Express',
-    'PostgreSQL & MongoDB',
-    'Tailwind CSS',
-    'Git & GitHub',
-    'Docker',
-    'AWS',
+  'React & Next.js',
+  'JavaScript',
+  'Node.js, Express & Laravel',
+  'React Native & Flutter',
+  'PostgreSQL, MySQL & SQLite',
+  'Tailwind CSS',
+  'Docker & AWS',
+  'Scrum & Metodologías Ágiles',
+  'Git & GitHub',
+  'Figma',
   ];
+  
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Sobre Mí</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Sobre Mí</h1>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-1">
-            <div className="relative w-full aspect-square rounded-lg overflow-hidden">
-              <Image
-                src={personalInfo.avatar}
-                alt={personalInfo.name}
-                fill
-                className="object-cover"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
+  <div className="relative w-full max-w-[240px] mx-auto md:max-w-none aspect-square rounded-lg overflow-hidden">
+    <Image
+      src={personalInfo.avatar}
+      alt={personalInfo.name}
+      fill
+      className="object-cover"
+      loading="lazy"
+      sizes="(max-width: 768px) 240px, 33vw"
+    />
+  </div>
           </div>
+          
           
           <div className="md:col-span-2">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -44,19 +48,15 @@ export default function AboutPage() {
             </h2>
             <div className="prose text-gray-700 space-y-4">
               <p>
-                Soy un desarrollador full stack apasionado por crear experiencias
-                web excepcionales. Con más de X años de experiencia, me especializo
-                en construir aplicaciones modernas y escalables.
+                Soy estudiante del último ciclo de Diseño y Desarrollo de Software en TECSUP, apasionado por crear
+  experiencias web y móviles completas, de principio a fin. He construido y desplegado
+  varios proyectos full stack desde plataformas web hasta aplicaciones móviles
+  aplicando buenas prácticas en cada etapa del desarrollo.
               </p>
               <p>
-                Mi enfoque está en escribir código limpio, mantenible y eficiente,
-                siempre buscando las mejores prácticas y las últimas tecnologías
-                para entregar productos de alta calidad.
-              </p>
-              <p>
-                Cuando no estoy programando, me gusta contribuir a proyectos de
-                código abierto, escribir artículos técnicos y aprender nuevas
-                tecnologías.
+                 Me caracterizo por el aprendizaje continuo y la adaptabilidad. Disfruto explorando
+  nuevas tecnologías y aplicándolas en proyectos reales para seguir creciendo como
+  desarrollador full stack.
               </p>
             </div>
           </div>
